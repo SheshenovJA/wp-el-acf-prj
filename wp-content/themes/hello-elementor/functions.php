@@ -363,4 +363,106 @@ function add_menu_link_class( $atts, $item, $args ) {
 add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
+if( function_exists('acf_add_local_field_group') ):
 
+    acf_add_local_field_group(array (
+        'key' => 'field_573931bfe4a0b',
+        'title' => 'Slider Content',
+        'fields' => array (
+            array (
+                'key' => 'field_563931bfe4a21',
+                'label' => 'Sliders list',
+                'name' => 'slider_items',
+                'type' => 'gallery',
+                'prefix' => '',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+                'readonly' => 0,
+                'disabled' => 0,
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+    ));
+
+
+    acf_add_local_field_group(array (
+        'key' => 'field_571631bfe4a1b',
+        'title' => 'How it works',
+        'fields' => array (
+            array (
+                'key' => 'field_563931bfe3a21',
+                'label' => 'Sliders list',
+                'name' => 'how_header',
+                'type' => 'text',
+                'prefix' => '',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'default_value' => 'How it works',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+                'readonly' => 0,
+                'disabled' => 0,
+            ),
+            array (
+                'key' => 'field_563931bfe3a21',
+                'label' => 'Sliders list',
+                'name' => 'how_header_desc',
+                'type' => 'text',
+                'prefix' => '',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'default_value' => 'How it works',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+                'readonly' => 0,
+                'disabled' => 0,
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page',
+                ),
+            ),
+        ),
+        'menu_order' => 1,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+    ));
+
+
+
+
+
+endif;
